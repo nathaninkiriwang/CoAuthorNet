@@ -49,7 +49,7 @@ Here’s a quick example to get started with CoAuthorNet.
     import pandas as pd
 
     staff_data = pd.read_csv("./author_school.csv")
-    staff_publications_data = yn.fetch_publications(staff_data)
+    staff_publications_data = yn.fetch_publications(staff_data, affiliation = 'insert_affiliation')
 
 
     G, author_dict, paper_dict = yn.create_bipartite_network(staff_publications_data)
@@ -64,8 +64,8 @@ Here’s a quick example to get started with CoAuthorNet.
 
 ## Function Reference
 
-- **`fetch_publications(staff_data, output_csv='staff_publications_data.csv')`**
-  - Fetches publication data for each staff member and saves it to a CSV file.
+- **`fetch_publications(staff_data, output_csv='staff_publications_data.csv', affiliation)`**
+  - Fetches publication data for each staff member and saves it to a CSV file. Affiliation corresponds to the university or orgnization the individual is connected to. This will allow for more accurate results incase of duplicate names. If unknown, that leave blank.
 
 - **`create_bipartite_network(df)`**
   - Creates a bipartite network of authors and publications from the data.

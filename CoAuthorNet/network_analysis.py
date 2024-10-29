@@ -6,7 +6,7 @@ import os
 from tqdm import tqdm
 import json
 
-def fetch_publications(staff_data, output_csv='staff_publications_data.csv'):
+def fetch_publications(staff_data, output_csv='staff_publications_data.csv', affiliation=None):
     if os.path.exists(output_csv):
         staff_publications_data = pd.read_csv(output_csv)
     else:
@@ -21,7 +21,7 @@ def fetch_publications(staff_data, output_csv='staff_publications_data.csv'):
             continue
 
         try:
-            search_query = scholarly.search_author(f"{staff}, Sydney")
+            search_query = scholarly.search_author(f"{staff}, {affiliation}")
             first_author_result = next(search_query)
             author = scholarly.fill(first_author_result)
             publication_titles = [pub['bib']['title'] for pub in author['publications']]
