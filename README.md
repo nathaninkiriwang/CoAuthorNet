@@ -85,6 +85,9 @@ Here’s a quick example to get started with CoAuthorNet.
 
 - **`plot_network(G, output_file='largest_component_network.png')`**
   - Plots and saves the largest connected component of the co-authorship network.
+ 
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 
 ## Contributing
