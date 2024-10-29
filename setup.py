@@ -8,7 +8,7 @@ setup(
     long_description_content_type='text/markdown',
     author='Nathan Inkiriwang, Bryan Ng',
     author_email='nathan.inkiriwang@sydney.edu.au, yizhe.ng@sydney.edu.au',
-    url='https://github.com/yourusername/CoAuthorNet',  
+    url='https://github.com/nathaninkiriwang/CoAuthorNet',  
     packages=find_packages(),
     install_requires=[
         'pandas',
